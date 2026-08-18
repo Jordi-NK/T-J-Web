@@ -29,11 +29,14 @@ A modern business website created to promote and sell custom websites for busine
 
 | Home | Services |
 |------|----------|
-| ![Home](images/home.png) | ![Services](images/services.png) |
+| <img width="1210" height="633" alt="image" src="https://github.com/user-attachments/assets/4f48cc1a-7a05-4824-a3aa-bc61ae7c007a" />
+ |<img width="1243" height="500" alt="image" src="https://github.com/user-attachments/assets/f6a82b66-ab2e-4962-9a1a-9ee515a153c5" />
+ |
 
 | Portfolio | Contact |
 |-----------|---------|
-| ![Portfolio](images/portfolio.png) | ![Contact](images/contact.png) |
+| ![Portfolio](images/portfolio.png) | <img width="1231" height="233" alt="image" src="https://github.com/user-attachments/assets/7dfb285b-307c-483c-98d3-58093d9030fe" />
+ |
 
 ---
 
