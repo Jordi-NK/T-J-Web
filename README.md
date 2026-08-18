@@ -1,4 +1,4 @@
-# 🌐 T%J Web
+# 🌐 T&J Web
 
 A modern business website created to promote and sell custom websites for businesses, creators, and startups. WebCraft helps clients establish a professional online presence with fast, responsive, and visually appealing websites.
 
