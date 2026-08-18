@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="T&J Web creates distinctive, high-performing websites for ambitious small businesses.">
+  <title>T&J Web | Websites that move businesses forward</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #65717a;
+      --paper: #f8f5ef;
+      --cream: #fffdf8;
+      --coral: #ee735b;
+      --coral-dark: #c85040;
+      --mint: #cfe5d6;
+      --line: #dedbd3;
+      --blue: #d8e9ee;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 24px 0; border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-family: "Space Grotesk", sans-serif; font-size: 1.15rem; font-weight: 700; }
+    .brand-mark { display: grid; place-items: center; width: 35px; height: 35px; color: var(--cream); background: var(--coral); border-radius: 50%; font-size: .83rem; letter-spacing: -1px; }
+    nav { display: flex; align-items: center; gap: 31px; color: var(--muted); font-size: .88rem; font-weight: 600; }
+    nav a:hover { color: var(--coral-dark); }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 13px 19px; border: 0; border-radius: 3px; color: var(--cream); background: var(--ink); font: inherit; font-size: .85rem; font-weight: 700; cursor: pointer; transition: transform .2s, background .2s; }
+    .button:hover { background: var(--coral-dark); transform: translateY(-2px); }
+    .button.light { color: var(--ink); background: var(--cream); }
+    .button.light:hover { background: white; }
+    .hero { display: grid; grid-template-columns: 1.06fr .94fr; gap: 70px; align-items: center; padding: 74px 0 92px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 19px; color: var(--coral-dark); font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 25px; height: 2px; background: var(--coral); }
+    h1, h2, h3 { margin: 0; font-family: "Space Grotesk", sans-serif; line-height: 1.03; letter-spacing: -.045em; }
+    h1 { max-width: 650px; font-size: clamp(3.5rem, 7vw, 6.2rem); }
+    h1 em { color: var(--coral); font-style: normal; }
+    .hero-copy { max-width: 500px; margin: 26px 0 33px; color: var(--muted); font-size: 1.08rem; }
+    .hero-actions { display: flex; align-items: center; gap: 21px; }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; font-size: .87rem; font-weight: 700; }
+    .text-link span { color: var(--coral); font-size: 1.25rem; transition: transform .2s; }
+    .text-link:hover span { transform: translateX(4px); }
+    .hero-art { position: relative; min-height: 455px; }
+    .hero-image { width: 86%; height: 390px; margin: 0 0 0 auto; object-fit: cover; border-radius: 2px; filter: saturate(.78); }
+    .shape { position: absolute; z-index: -1; }
+    .shape.coral { top: -22px; right: 0; width: 125px; height: 125px; background: var(--coral); border-radius: 50%; }
+    .shape.mint { bottom: 3px; left: 1px; width: 145px; height: 145px; background: var(--mint); border-radius: 50% 50% 50% 8px; }
+    .project-note { position: absolute; bottom: 0; left: 28px; padding: 17px 20px; background: var(--cream); box-shadow: 0 12px 30px rgba(23,33,43,.1); }
+    .project-note strong { display: block; font-family: "Space Grotesk", sans-serif; font-size: 1.4rem; }
+    .project-note small { color: var(--muted); }
+    .intro-band { padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .intro-band p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .intro-band strong { color: var(--ink); }
+    section { padding: 108px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 43px; }
+    .section-head h2 { max-width: 530px; font-size: clamp(2.5rem, 4.5vw, 4.2rem); }
+    .section-head p { max-width: 310px; margin: 0; color: var(--muted); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+    .service { padding: 28px 25px 25px 0; border-bottom: 1px solid var(--line); }
+    .service + .service { padding-left: 25px; border-left: 1px solid var(--line); }
+    .service-number { color: var(--coral); font-family: "Space Grotesk", sans-serif; font-size: .82rem; font-weight: 700; }
+    .service h3 { margin: 42px 0 13px; font-size: 1.45rem; letter-spacing: -.03em; }
+    .service p { max-width: 290px; margin: 0; color: var(--muted); font-size: .92rem; }
+    .work { background: var(--blue); }
+    .work-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 22px; }
+    .work-card { position: relative; overflow: hidden; min-height: 410px; background: var(--ink); }
+    .work-card.small { min-height: 410px; background: #d7c2ab; }
+    .work-card img { width: 100%; height: 100%; object-fit: cover; opacity: .86; transition: transform .5s; }
+    .work-card:hover img { transform: scale(1.04); }
+    .work-label { position: absolute; right: 18px; bottom: 18px; left: 18px; display: flex; align-items: end; justify-content: space-between; color: white; }
+    .work-label h3 { font-size: 1.55rem; }
+    .work-label p { margin: 5px 0 0; font-size: .8rem; opacity: .8; }
+    .round-arrow { display: grid; place-items: center; width: 38px; height: 38px; color: var(--ink); background: var(--cream); border-radius: 50%; font-size: 1.3rem; }
+    .process { display: grid; grid-template-columns: .8fr 1.2fr; gap: 85px; }
+    .process h2 { font-size: clamp(2.5rem, 4.5vw, 4.1rem); }
+    .steps { border-top: 1px solid var(--line); }
+    .step { display: grid; grid-template-columns: 48px 1fr; gap: 20px; padding: 23px 0; border-bottom: 1px solid var(--line); }
+    .step-index { color: var(--coral-dark); font-family: "Space Grotesk", sans-serif; font-weight: 700; }
+    .step h3 { margin-bottom: 7px; font-size: 1.2rem; letter-spacing: -.025em; }
+    .step p { max-width: 510px; margin: 0; color: var(--muted); font-size: .9rem; }
+    .contact { padding: 76px 0; color: var(--cream); background: var(--coral); }
+    .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+    .contact h2 { max-width: 620px; font-size: clamp(2.7rem, 5vw, 4.8rem); }
+    footer { padding: 24px 0; color: var(--muted); font-size: .8rem; }
+    .footer-inner { display: flex; justify-content: space-between; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 34px, 560px); }
+      nav a:not(.button) { display: none; }
+      nav { gap: 0; }
+      .topbar { padding: 18px 0; }
+      .hero { display: block; padding: 58px 0 65px; }
+      h1 { font-size: clamp(3.3rem, 16vw, 5rem); }
+      .hero-art { min-height: 330px; margin-top: 54px; }
+      .hero-image { height: 285px; width: 88%; }
+      .shape.coral { width: 90px; height: 90px; }
+      .shape.mint { width: 100px; height: 100px; }
+      section { padding: 72px 0; }
+      .section-head, .contact-inner { display: block; }
+      .section-head p { margin-top: 20px; }
+      .service-grid, .work-grid, .process { grid-template-columns: 1fr; }
+      .service, .service + .service { padding: 25px 0; border-left: 0; }
+      .service h3 { margin-top: 25px; }
+      .work-card, .work-card.small { min-height: 300px; }
+      .process { gap: 38px; }
+      .contact .button { margin-top: 28px; }
+      .footer-inner { display: block; }
+      .footer-inner p:last-child { margin-top: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="brand" href="#top" aria-label="T and J Web home"><span class="brand-mark">T&J</span> web</a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#work">Our work</a>
+      <a href="#process">Process</a>
+      <a class="button" href="#contact">Start a project <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">Independent web studio</div>
+        <h1>Good businesses deserve <em>great websites.</em></h1>
+        <p class="hero-copy">T&J Web makes thoughtful, high-performing websites for people building something worth talking about.</p>
+        <div class="hero-actions">
+          <a class="button" href="#contact">Let's work together <span aria-hidden="true">&#8599;</span></a>
+          <a class="text-link" href="#work">See our work <span aria-hidden="true">&#8594;</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="A bright website design workspace">
+        <span class="shape coral"></span><span class="shape mint"></span>
+        <img class="hero-image" src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=85" alt="Designer arranging a colorful website layout">
+        <div class="project-note"><strong>Built with intent.</strong><small>Strategy, design, and code.</small></div>
+      </div>
+    </section>
+
+    <div class="intro-band"><div class="wrap"><p><strong>Websites for:</strong> makers, founders, local legends, and teams with big ideas.</p></div></div>
+
+    <section class="wrap" id="services">
+      <div class="section-head"><h2>Everything your next website needs.</h2><p>No mystery packages or bloated handoffs. Just useful work that makes your business easier to find and easier to choose.</p></div>
+      <div class="service-grid">
+        <article class="service"><span class="service-number">01 / Strategy</span><h3>Find your sharpest angle.</h3><p>We get clear on your audience, your voice, and the one action you want every visitor to take.</p></article>
+        <article class="service"><span class="service-number">02 / Design</span><h3>Look like the real deal.</h3><p>Distinctive visual systems and intuitive layouts that feel unmistakably yours, on every screen.</p></article>
+        <article class="service"><span class="service-number">03 / Development</span><h3>Make it work beautifully.</h3><p>Fast, accessible websites built to grow with you and stay simple to manage after launch.</p></article>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="wrap"><div class="section-head"><h2>Selected work, made to matter.</h2><p>A small selection of recent launches and transformations.</p></div>
+        <div class="work-grid">
+          <a class="work-card" href="#contact"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85" alt="Team collaborating around a table"><div class="work-label"><div><h3>Common Ground</h3><p>Brand strategy / Web design</p></div><span class="round-arrow" aria-hidden="true">&#8599;</span></div></a>
+          <a class="work-card small" href="#contact"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=85" alt="Notebook and laptop on a creative desk"><div class="work-label"><div><h3>Field Notes</h3><p>Identity / E-commerce</p></div><span class="round-arrow" aria-hidden="true">&#8599;</span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap process" id="process"><div><div class="eyebrow">How it works</div><h2>A better process, from hello to launch.</h2></div><div class="steps"><article class="step"><span class="step-index">01</span><div><h3>Say hello</h3><p>Tell us what you are building, where you are stuck, and what success looks like.</p></div></article><article class="step"><span class="step-index">02</span><div><h3>Make a plan</h3><p>We shape the right scope, timeline, and creative direction for your goals and budget.</p></div></article><article class="step"><span class="step-index">03</span><div><h3>Bring it to life</h3><p>We design, build, test, and polish until your new site is ready to do its best work.</p></div></article></div></section>
+
+    <section class="contact" id="contact"><div class="wrap contact-inner"><h2>Have a good idea? Let's make it real.</h2><a class="button light" href="mailto:tjwebstuidos@gmail.com">tjwebstuidos@gmail.com <span aria-hidden="true">&#8599;</span></a></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><p>&copy; 2026 T&J Web. Made with care.</p><p>Websites for people with somewhere to go.</p></div></footer>
+</body>
+</html>
